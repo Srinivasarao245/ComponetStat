@@ -1,0 +1,21 @@
+<!-- Print array values in list items in React component -->
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+     <body>
+        <div id="a1"></div>
+        <script type="text/babel">
+            var Ab = function (){
+                var [a,setA] = React.useState([2,3,10,14,5,6,4,9,7,8,11,20,31,64,54]);
+                return (
+                    <div>
+                        {a.map((b)=>{return <li>{b*b}</li> })}
+                    </div>
+                )}
+            ReactDOM.render(<Ab/>,document.getElementById('a1'));    
+        </script>
+     </body>
+</html> 

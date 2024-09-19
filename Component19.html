@@ -1,0 +1,22 @@
+<!-- Conditionally apply url to image in React component -->
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+     <body>
+        <div id="a1"></div>
+        <script type="text/babel">
+            var Ab = function (){
+                var x = +prompt();12
+                var [a,setA] = React.useState(x);
+                return (
+                    <div>
+                        <img width='300px' src= {a%2===0 ? 'https://i.pinimg.com/originals/a9/04/8d/a9048d1785e990ffbc1f667e36508a3f.jpg' : 'https://i.pinimg.com/originals/06/35/94/06359489d76d6a4cecc9f0cff79b3056.jpg'} />
+                    </div>
+                )}
+            ReactDOM.render(<Ab/>,document.getElementById('a1'));    
+        </script>
+     </body>
+</html>

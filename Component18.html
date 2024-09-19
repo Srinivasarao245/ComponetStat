@@ -1,0 +1,22 @@
+<!-- Display different images conditionally React component -->
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+     <body>
+        <div id="a1"></div>
+        <script type="text/babel">
+            var Ab = function (){
+                var x = +prompt();
+                var [a,setA] = React.useState(x);
+                return (
+                    <div>
+                       {a%2 ===0 ?(<img width="300px" src='https://i.pinimg.com/originals/f7/7b/ff/f77bff04671f389c94b80fe4b3460ac7.jpg' />):(<img width="300px" src='https://togetfitness.com/wp-content/uploads/2021/05/Kiran-Dembla-2-1536x864.jpg' />)} 
+                    </div>
+                )}
+            ReactDOM.render(<Ab/>,document.getElementById('a1'));    
+        </script>
+     </body>
+</html>

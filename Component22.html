@@ -1,0 +1,23 @@
+<!-- Print array values in React component -->
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+     <body>
+        <div id="a1"></div>
+        <script type="text/babel">
+            var Ab = function (){
+                var [a,setA] = React.useState(['rat','cat','dog','mouse','pig','monkey','rabbit','lion','cheeta','tiger']);
+                var [b,setB] = React.useState([2,4,6,5,1,3,8,7,3,6,4,25,15]);
+                return (
+                    <div>
+                        {a.map((a)=>{return <h1>{a}</h1>})}
+                        {b.map((b)=>{return <h1>{b}</h1>})}
+                    </div>
+                )}
+            ReactDOM.render(<Ab/>,document.getElementById('a1'));    
+        </script>
+     </body>
+</html>

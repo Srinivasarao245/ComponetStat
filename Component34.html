@@ -1,0 +1,20 @@
+<!-- Print array strings in list items in React component -->
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+     <body>
+        <div id="a1"></div>
+        <script type="text/babel">
+            var Ab = function (){
+                var [a,setA] = React.useState(['ant','cat','dog','bird','lion','fish','elephant','giraffe']);
+                return (
+                    <ul>{a.map((a)=>{return (a.length%2===0?( <li><b>{a}</b></li> ):( <li><i>{a}</i></li> )) })}
+                    </ul>
+                )}
+            ReactDOM.render(<Ab/>,document.getElementById('a1'));    
+        </script>
+     </body>
+</html>

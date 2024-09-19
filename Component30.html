@@ -1,0 +1,19 @@
+<!-- Print the sum of all numbers of array in React component -->
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+     <body>
+        <div id="a1"></div>
+        <script type="text/babel">
+            var Ab = function (){
+                var [a,setA] = React.useState([1,2,3,5,8,7,10,9,12,13,16,17,18,21,24,28,25,30]);
+                return (<div> 
+                            {a.reduce((b,c) => { return b + c },0)}
+                        </div>) }              
+            ReactDOM.render(<Ab/>,document.getElementById('a1'));    
+        </script>
+     </body>
+</html>
